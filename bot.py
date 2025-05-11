@@ -8,6 +8,10 @@ def get_signals(symbol="^NSEI"):
     data['SMA_50'] = ta.sma(data['Close'], 50)
     data['Signal'] = (data['SMA_20'] > data['SMA_50']).astype(int)
     return data
-
+# Add this function
+def backtest(data):
+    data['Return'] = data['Close'].pct_change()
+    data['Strategy'] = data['Signal'].shift(1) * data['Return']
+    return data[['Return', 'Strategy']].cumsum().plot()
 if __name__ == "__main__":
     print(get_signals().tail())
