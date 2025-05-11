@@ -1,0 +1,19 @@
+Auto-Trading-Bot-India/
+├── .github/
+│   └── workflows/
+│       └── run.yml            # GitHub Actions scheduler
+├── configs/
+│   └── config.json            # Ticker symbols and parameters
+├── modules/
+│   ├── data_fetcher.py        # Market data download
+│   ├── strategy.py            # Trading logic
+│   └── backtester.py          # Performance analysis
+├── outputs/
+│   ├── signals/               # Generated trade signals
+│   └── backtest_results/      # Historical performance
+├── tests/
+│   └── test_strategy.py       # Unit tests
+├── bot.py                     # Main executable
+├── requirements.txt           # Dependencies
+├── README.md                  # Project documentation
+└── .gitignore                 # Ignore files
