@@ -1,0 +1,6 @@
+{
+  "symbols": ["^NSEI", "RELIANCE.NS", "TATAMOTORS.NS"],
+  "sma_short": 20,
+  "sma_long": 50,
+  "timeframe": "1h"
+}

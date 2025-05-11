@@ -1,0 +1,4 @@
+yfinance==0.2.31
+pandas-ta==0.3.14b0
+matplotlib==3.7.4
+requests==2.31.0
