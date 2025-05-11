@@ -1,19 +1,48 @@
 Auto-Trading-Bot-India/
 ├── .github/
-│   └── workflows/
-│       └── run.yml            # GitHub Actions scheduler
+│   ├── workflows/
+│   │   └── run.yml                  # CI/CD pipeline
+│   └── ISSUE_TEMPLATE/
+│       └── bug_report.md            # Standardized issue tracking
 ├── configs/
-│   └── config.json            # Ticker symbols and parameters
+│   ├── config.json                  # Strategy parameters
+│   ├── secrets.json.example         # Template for credentials
+│   └── __init__.py                  # Python package marker
 ├── modules/
-│   ├── data_fetcher.py        # Market data download
-│   ├── strategy.py            # Trading logic
-│   └── backtester.py          # Performance analysis
+│   ├── __init__.py
+│   ├── data_fetcher.py             # Market data handler
+│   ├── strategy.py                  # Trading logic
+│   ├── backtester.py                # Performance analysis
+│   ├── telegram_notifier.py         # Alert system
+│   └── risk_manager.py              # Position sizing
 ├── outputs/
-│   ├── signals/               # Generated trade signals
-│   └── backtest_results/      # Historical performance
+│   ├── signals/
+│   │   ├── .gitkeep
+│   │   └── latest.csv               # Today's signals
+│   └── backtest_results/
+│       ├── .gitkeep
+│       ├── latest.png               # Equity curve
+│       └── historical/              # Archived results
+│           └── 20240515.json
 ├── tests/
-│   └── test_strategy.py       # Unit tests
-├── bot.py                     # Main executable
-├── requirements.txt           # Dependencies
-├── README.md                  # Project documentation
-└── .gitignore                 # Ignore files
+│   ├── __init__.py
+│   ├── test_data_fetcher.py
+│   ├── test_strategy.py
+│   └── conftest.py                  # Pytest fixtures
+├── docs/
+│   ├── API_REFERENCE.md
+│   └── SETUP_GUIDE.md
+├── scripts/
+│   ├── deploy.sh                    # Deployment script
+│   └── cleanup.sh                   # Log rotation
+├── utils/
+│   ├── logger.py                    # Custom logging
+│   └── helpers.py                   # Common functions
+├── .env.example                     # Environment template
+├── .gitignore
+├── requirements.txt
+├── requirements_dev.txt             # Dev dependencies
+├── pyproject.toml                   # Modern Python config
+├── bot.py                           # Main entry point
+├── setup.py                         # Package installer
+└── README.md                        # Project documentation
